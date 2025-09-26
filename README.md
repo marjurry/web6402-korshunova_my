@@ -6,4 +6,4 @@
 Как говорил Конфуций:
 > "На самом деле жизнь проста, но мы настойчиво её усложняем"
 Хорошо говорил. Стараюсь следовать идеологии этой цитаты и упрощать жизнь, чтобы потом не чувствовать себя котиком с картинки:
-!(добре)[https://sun9-82.userapi.com/s/v1/if2/zEalQW0MjvUCdPEtxahchEaIzOQM3u4j9PER1l7g5mkEnL50IPIELB2l0Zw5mQeg7-6pxtzTcAYEMzyQEQB7Cp7Z.jpg?quality=95&as=32x27,48x41,72x61,108x92,160x136,240x204,360x306,480x408,540x459,640x543,720x611,1080x917,1200x1019&from=bu&cs=1200x0]
+[добре](https://sun9-82.userapi.com/s/v1/if2/zEalQW0MjvUCdPEtxahchEaIzOQM3u4j9PER1l7g5mkEnL50IPIELB2l0Zw5mQeg7-6pxtzTcAYEMzyQEQB7Cp7Z.jpg?quality=95&as=32x27,48x41,72x61,108x92,160x136,240x204,360x306,480x408,540x459,640x543,720x611,1080x917,1200x1019&from=bu&cs=1200x0)
