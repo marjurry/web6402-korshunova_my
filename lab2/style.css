@@ -1,0 +1,548 @@
+/* style.css - Упрощенная версия */
+:root {
+    --primary-color: #1e40af;
+    --primary-light: #3b82f6;
+    --secondary-color: #06b6d4;
+    --accent-color: #8b5cf6;
+    --warning-color: #f59e0b;
+    --success-color: #10b981;
+    --danger-color: #ef4444;
+    --light-bg: #f8fafc;
+    --card-bg: #ffffff;
+    --text-dark: #1e293b;
+    --text-light: #64748b;
+    --border-radius: 8px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--text-dark);
+    background-color: #f5f5f5;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: var(--card-bg);
+}
+
+/* Заголовки */
+h1, h2, h3, h4, h5, h6 {
+    color: var(--primary-color);
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #e2e8f0;
+    background-color: var(--primary-color);
+    border-radius: var(--border-radius);
+    padding: 20px;
+}
+
+.university-header h1 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: white;
+}
+
+.university-header h2 {
+    font-size: 18px;
+    font-weight: normal;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+/* Навигация */
+nav {
+    margin-bottom: 20px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    background-color: var(--primary-light);
+    border-radius: var(--border-radius);
+    padding: 10px;
+}
+
+nav li {
+    margin: 0 10px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+nav a:hover, nav a.active {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Основной контент */
+main {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+}
+
+.welcome-section {
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #e0f2fe;
+    border-radius: var(--border-radius);
+    border-left: 4px solid var(--primary-color);
+}
+
+.welcome-section h2 {
+    font-size: 22px;
+    margin-bottom: 5px;
+    color: var(--primary-color);
+}
+
+.date-info {
+    color: var(--text-light);
+    font-weight: 500;
+    font-size: 14px;
+}
+
+/* Блоки с объявлениями */
+.alert-section {
+    background-color: #fef3c7;
+    border: 1px solid var(--warning-color);
+    border-radius: var(--border-radius);
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+.alert-section h3 {
+    color: #92400e;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.alert-section a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.alert-section a:hover {
+    text-decoration: underline;
+}
+
+.announcements {
+    background-color: var(--light-bg);
+    padding: 20px;
+    border-radius: var(--border-radius);
+}
+
+.announcements h2 {
+    margin-bottom: 15px;
+    font-size: 24px;
+    color: var(--primary-color);
+    text-align: center;
+}
+
+.announcement-item {
+    margin-bottom: 20px;
+    padding: 15px;
+    border-bottom: 1px solid #e2e8f0;
+    background: white;
+    border-radius: var(--border-radius);
+}
+
+.announcement-item:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+.announcement-item h3 {
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: var(--primary-color);
+}
+
+.announcement-date {
+    color: var(--text-light);
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+/* Боковая панель */
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.sidebar-item {
+    background-color: var(--light-bg);
+    border-radius: var(--border-radius);
+    padding: 15px;
+    border-left: 4px solid var(--primary-color);
+}
+
+.sidebar-item:nth-child(2) {
+    border-left-color: var(--success-color);
+    background-color: #f0fdf4;
+}
+
+.sidebar-item:nth-child(3) {
+    border-left-color: var(--accent-color);
+    background-color: #faf5ff;
+}
+
+.sidebar-item:nth-child(4) {
+    border-left-color: var(--warning-color);
+    background-color: #fffbeb;
+}
+
+.sidebar-item h3 {
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: var(--primary-color);
+}
+
+.sidebar-item h4 {
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: var(--text-light);
+    font-weight: 600;
+}
+
+.sidebar-item p {
+    margin-bottom: 10px;
+    color: var(--text-dark);
+}
+
+.amount {
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--success-color);
+}
+
+.sidebar-item a {
+    color: var(--primary-light);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.sidebar-item a:hover {
+    text-decoration: underline;
+}
+
+
+footer {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #e2e8f0;
+    text-align: center;
+    color: var(--text-light);
+    font-size: 14px;
+    background-color: var(--light-bg);
+    padding: 15px;
+    border-radius: var(--border-radius);
+}
+
+/* Таблицы */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+}
+
+table th, table td {
+    border: 1px solid #e2e8f0;
+    padding: 12px;
+    text-align: left;
+}
+
+table th {
+    background-color: var(--primary-color);
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+table tr:nth-child(even) {
+    background-color: var(--light-bg);
+}
+
+/* Выравнивание в таблице */
+.align-left {
+    text-align: left;
+}
+
+.align-center {
+    text-align: center;
+}
+
+.align-right {
+    text-align: right;
+}
+
+/* Стили для дополнительных страниц */
+.profile-section, .documents-section, .schedule-section, .contacts-section {
+    margin-bottom: 30px;
+    padding: 20px;
+    background: white;
+    border-radius: var(--border-radius);
+}
+
+.profile-section h2, .documents-section h2, .schedule-section h2, .contacts-section h2 {
+    margin-bottom: 15px;
+    font-size: 24px;
+    color: var(--primary-color);
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+.form-group input, .form-group textarea, .form-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #e2e8f0;
+    border-radius: 4px;
+    font-size: 14px;
+    background: var(--light-bg);
+}
+
+.form-group input:focus, .form-group textarea:focus, .form-group select:focus {
+    outline: none;
+    border-color: var(--primary-light);
+}
+
+
+/* Боковая панель профиля */
+.sidebar {
+    width: 300px;
+}
+
+.profile-card {
+    background-color: var(--light-bg);
+    border-radius: var(--border-radius);
+    padding: 20px;
+    text-align: center;
+    border: 1px solid #e2e8f0;
+}
+
+.profile-photo {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background-color: #cbd5e1;
+    margin: 0 auto 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-light);
+    font-size: 14px;
+}
+
+.profile-card h2 {
+    font-size: 18px;
+    margin-bottom: 5px;
+    color: var(--primary-color);
+}
+
+.profile-card p {
+    margin-bottom: 8px;
+    color: var(--text-dark);
+    font-size: 14px;
+}
+
+.contact-info {
+    text-align: left;
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid #e2e8f0;
+}
+
+.contact-info p {
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+/* Основной контент */
+.content {
+    flex: 1;
+}
+
+.page {
+    display: none;
+}
+
+.page.active {
+    display: block;
+}
+
+/* Секции информации */
+.info-section {
+    background-color: white;
+    border-radius: var(--border-radius);
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 1px solid #e2e8f0;
+}
+
+.info-section h3 {
+    color: var(--primary-color);
+    margin-bottom: 15px;
+    font-size: 20px;
+    border-bottom: 2px solid var(--primary-light);
+    padding-bottom: 8px;
+}
+
+/* Сетка информации */
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.info-item {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.info-label {
+    font-weight: bold;
+    color: var(--text-dark);
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.info-value {
+    color: var(--text-light);
+    font-size: 14px;
+}
+
+/* Таблица расписания */
+.schedule-table {
+    width: 100%;
+}
+
+.schedule-table th {
+    text-align: center;
+}
+
+.schedule-table td {
+    text-align: center;
+    vertical-align: middle;
+}
+
+
+.contacts-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.contact-card {
+    background-color: var(--light-bg);
+    border-radius: var(--border-radius);
+    padding: 15px;
+    border: 1px solid #e2e8f0;
+}
+
+.contact-card h4 {
+    color: var(--primary-color);
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.contact-card p {
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: var(--text-dark);
+}
+
+.contact-card strong {
+    color: var(--text-dark);
+}
+
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table th {
+    text-align: left;
+    font-weight: 600;
+}
+
+table tr:hover {
+    background-color: #f8fafc;
+}
+
+
+.schedule-table td {
+    background-color: white;
+    transition: background-color 0.2s ease;
+}
+
+.schedule-table td:hover {
+    background-color: #f0f9ff;
+}
+
+
+td:last-child {
+    font-weight: 600;
+}
+
+
+.text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.mb-10 {
+    margin-bottom: 10px;
+}
+
+.mb-20 {
+    margin-bottom: 20px;
+}
+
+.mt-10 {
+    margin-top: 10px;
+}
+
+.mt-20 {
+    margin-top: 20px;
+}
+
