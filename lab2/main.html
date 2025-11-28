@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Самарский университет - Личный кабинет</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Самарский университет | Личный кабинет</title>
+    <link rel="stylesheet" href="style2.css">
 </head>
 <body>
     <div class="container">
@@ -16,73 +16,93 @@
         </header>
         
         <nav>
-            <ul>
-                <li><a href="main.html">Главная</a></li>
-                <li><a href="schedule.html">Расписание</a></li>
-                <li><a href="lk.html">Профиль</a></li>
+            <ul class="nav-flex">
+                <li><a href="main.html" class="nav-link active">Главная</a></li>
+                <li><a href="schedule.html" class="nav-link">Расписание</a></li>
+
+                <li><a href=lk.html" class="nav-link">Вход</a></li>
             </ul>
         </nav>
         
-        <main>
-            <section class="welcome-section">
-                <h2>Здравствуйте, Мария</h2>
-                <div class="date-info">
-                    • <span class="day">понедельник, 13.10</span>
-                </div>
-            </section>
-            
-            <section class="alert-section">
-                <h3>Флюорография</h3>
-                <p>Отсутствует справка. Пройдите исследования и представьте справку в санаторий-профилакторий. <a href="#">Подробнее</a></p>
-            </section>
-            
-            <section class="announcements">
-                <h2>Объявления</h2>
-                
-                <div class="announcement-item">
-                    <h3>Справки о размере стипендии студентам</h3>
-                    <p>Справки выдаются лично студенту при наличии документа с 14:00 до 16:00 в 407 кабинете административного корпуса. Заявки по телефону не принимаются.</p>
-                    <div class="announcement-date">19.10.2020</div>
-                </div>
-                
-                <div class="announcement-item">
-                    <h3>Открыт набор на Цифровую кафедру</h3>
-                    <p>Бесплатное обучение для студентов очной и очно-заочной форм обучения, начиная со 2 курса</p>
-                    <div class="announcement-date">03.09.2024</div>
-                </div>
-            </section>
-            
+        <main class="main-flex">
             <div class="sidebar">
-                <div class="sidebar-item">
-                    <h3>Остались вопросы?</h3>
-                    <h4>Тех. поддержка</h4>
-                    <p>+7 (846) 257-40-99, help@ssau.ru</p>
+                <div class="profile-card animated-card">
+                    <div class="profile-image"></div>
+                    <h2>Коршунова Мария Юрьевна</h2>
+                    <p>студент</p>
+                    <p>04.05.2004</p>
+                    
+                    <div class="contact-info">
+                        <p><strong>Телефон:</strong> +79170129841</p>
+                        <p><strong>Email:</strong> 2022-02376@students.ssau.ru</p>
+                    </div>
                 </div>
                 
-                <div class="sidebar-item">
+                <div class="sidebar-item animated-card">
                     <h3>Стипендия</h3>
                     <p class="amount">3 750 ₽</p>
                     <a href="#">Подробнее</a>
                 </div>
+            </div>
+            
+            <div class="content">
+                <section class="welcome-section">
+                    <h2>Здравствуйте, Мария</h2>
+                    <div class="date-info">
+                        • <span class="day" id="current-date">понедельник, 13.10</span>
+                    </div>
+                </section>
                 
-                <div class="sidebar-item">
-                    <h3>Предыдущая версия ЛК</h3>
-                    <p>Часть разделов временно доступна в старой версии по ссылке</p>
-                    <a href="http://cabinet.ssau.ru">cabinet.ssau.ru</a>
+                <div class="alert-section animated-alert">
+                    <h3>Флюорография</h3>
+                    <p>Отсутствует справка. Пройдите исследования и представьте справку в санаторий-профилакторий. <a href="#">Подробнее</a></p>
                 </div>
                 
-                <div class="sidebar-item">
-                    <h3>Согласование работ</h3>
-                    <p>1 на согласовании</p>
-                    <p>1 для заполнения</p>
-                    <a href="#">Подробнее</a>
+                <div class="info-section">
+                    <h3>Профиль обучения</h3>
+                    <div class="info-grid">
+                        <div class="info-item">
+                            <div class="info-label">Группа:</div>
+                            <div class="info-value">6402-010302D</div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-label">Номер зачётки:</div>
+                            <div class="info-value">2022-02376</div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-label">Уровень образования:</div>
+                            <div class="info-value">Бакалавриат</div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-label">Направление подготовки:</div>
+                            <div class="info-value">Прикладная математика и информатика</div>
+                        </div>
+                    </div>
                 </div>
+                
+                <section class="announcements">
+                    <h2>Объявления</h2>
+                    
+                    <div class="announcement-item animated-card">
+                        <h3>Справки о размере стипендии студентам</h3>
+                        <p>Справки выдаются лично студенту при наличии документа с 14:00 до 16:00 в 407 кабинете административного корпуса. Заявки по телефону не принимаются.</p>
+                        <div class="announcement-date">19.10.2020</div>
+                    </div>
+                    
+                    <div class="announcement-item animated-card">
+                        <h3>Открыт набор на Цифровую кафедру</h3>
+                        <p>Бесплатное обучение для студентов очной и очно-заочной форм обучения, начиная со 2 курса</p>
+                        <div class="announcement-date">03.09.2024</div>
+                    </div>
+                </section>
             </div>
         </main>
         
         <footer>
-            <p>&copy; 2024 Самарский университет. Все права защищены.</p>
+            <p>Самарский университет © 2024. Все права защищены.</p>
         </footer>
     </div>
+
+    <script src="js/script.js"></script>
 </body>
 </html>
