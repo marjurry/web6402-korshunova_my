@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Самарский университет | Личный кабинет</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Самарский университет | Авторизация</title>
+    <link rel="stylesheet" href="style2.css">
+
 </head>
 <body>
     <div class="container">
@@ -16,178 +17,74 @@
         </header>
         
         <nav>
-            <ul>
-                <li><a href="main.html">Главная</a></li>
-                <li><a href="schedule.html">Расписание</a></li>
-                <li><a href="lk.html">Профиль</a></li>
+            <ul class="nav-flex">
+                <li><a href="main.html" class="nav-link">Главная</a></li>
+                <li><a href="schedule.html" class="nav-link">Расписание</a></li>
+                <li><a href="lk.html" class="nav-link">Профиль</a></li>
+
             </ul>
         </nav>
-        
-        <main>
-            <div class="sidebar">
-                <div class="profile-card">
-                <img src="profile.png" alt="Фото студента" class="profile-photo">
 
-                    <h2>Коршунова Мария Юрьевна</h2>
-                    <p>студент</p>
-                    <p>04.05.2004</p>
-                    
-                    <div class="contact-info">
-                        <p><strong>Телефон:</strong> +79170129841</p>
-                        <p><strong>Email:</strong> 2022-02376@students.ssau.ru</p>
+        <main class="auth-main">
+            <div class="auth-container animated-card">
+                <h2>Вход в личный кабинет</h2>
+                <form id="authForm" class="auth-form">
+                    <div class="form-group">
+                        <label for="login">Логин (номер зачётки):</label>
+                        <input type="text" id="login" name="login" required 
+                               placeholder="2022-02376" pattern="[0-9-]+"
+                               title="Введите номер зачётки в формате XXXX-XXXXX">
                     </div>
+                    
+                    <div class="form-group">
+                        <label for="password">Пароль:</label>
+                        <input type="password" id="password" name="password" required
+                               minlength="6" placeholder="Введите пароль">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="userType">Тип пользователя:</label>
+                        <select id="userType" name="userType" required>
+                            <option value="">Выберите тип</option>
+                            <option value="student">Студент</option>
+                            <option value="teacher">Преподаватель</option>
+                            <option value="staff">Сотрудник</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group checkbox-group">
+                        <input type="checkbox" id="remember" name="remember">
+                        <label for="remember">Запомнить меня</label>
+                    </div>
+                    
+                    <div class="form-group checkbox-group">
+                        <input type="checkbox" id="agreement" name="agreement" required>
+                        <label for="agreement">Согласен на обработку персональных данных</label>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">Войти</button>
+                </form>
+                
+                <div class="auth-links">
+                    <a href="#">Забыли пароль?</a>
+                    <a href="#">Регистрация</a>
                 </div>
-            
             </div>
             
-            <div class="content">
-                <!-- Главная страница -->
-                <div id="main" class="page active">
-                    
-                    <div class="info-section">
-                        <h3>Профиль обучения</h3>
-                        <div class="info-grid">
-                            <div class="info-item">
-                                <div class="info-label">Группа:</div>
-                                <div class="info-value">6402-010302D</div>
-                            </div>
-                            <div class="info-item">
-                                <div class="info-label">Номер зачётки:</div>
-                                <div class="info-value">2022-02376</div>
-                            </div>
-                            <div class="info-item">
-                                <div class="info-label">Уровень образования:</div>
-                                <div class="info-value">Бакалавриат</div>
-                            </div>
-                            <div class="info-item">
-                                <div class="info-label">Направление подготовки:</div>
-                                <div class="info-value">Прикладная математика и информатика</div>
-                            </div>
-                            <div class="info-item">
-                                <div class="info-label">Форма обучения:</div>
-                                <div class="info-value">Очная</div>
-                            </div>
-                            <div class="info-item">
-                                <div class="info-label">Тип места:</div>
-                                <div class="info-value">Бюджет</div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="info-section">
-                        <h3>Последние события</h3>
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th>Дата</th>
-                                    <th>Событие</th>
-                                    <th>Статус</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>15.10.2023</td>
-                                    <td>Зачёт по математическому анализу</td>
-                                    <td>Сдан</td>
-                                </tr>
-                                <tr>
-                                    <td>20.10.2023</td>
-                                    <td>Лабораторная работа по программированию</td>
-                                    <td>На проверке</td>
-                                </tr>
-                                <tr>
-                                    <td>25.10.2023</td>
-                                    <td>Экзамен по английскому языку</td>
-                                    <td>Предстоит</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-                
-                <!-- Страница расписания -->
-                <div id="schedule" class="page">
-                    <h2>Расписание занятий</h2>
-                    <div class="info-section">
-                        <h3>Группа 6402-010302D</h3>
-                        <table class="schedule-table">
-                            <thead>
-                                <tr>
-                                    <th>Время</th>
-                                    <th>Понедельник</th>
-                                    <th>Вторник</th>
-                                    <th>Среда</th>
-                                    <th>Четверг</th>
-                                    <th>Пятница</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>9:00-10:30</td>
-                                    <td>Математический анализ</td>
-                                    <td>Программирование</td>
-                                    <td>Физика</td>
-                                    <td>Иностранный язык</td>
-                                    <td>Дискретная математика</td>
-                                </tr>
-                                <tr>
-                                    <td>10:40-12:10</td>
-                                    <td>Алгебра и геометрия</td>
-                                    <td>Программирование</td>
-                                    <td>Математический анализ</td>
-                                    <td>Физкультура</td>
-                                    <td>Web-технологии</td>
-                                </tr>
-                                <tr>
-                                    <td>12:40-14:10</td>
-                                    <td>История</td>
-                                    <td>Базы данных</td>
-                                    <td>Алгоритмы и структуры данных</td>
-                                    <td>Программирование</td>
-                                    <td>Операционные системы</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-                
-                <!-- Страница контактов -->
-                <div id="contacts" class="page">
-                    <h2>Контакты</h2>
-                    <div class="contacts-grid">
-                        <div class="contact-card">
-                            <h4>Деканат</h4>
-                            <p><strong>Адрес:</strong> ул. Академика Павлова, 1, каб. 201</p>
-                            <p><strong>Телефон:</strong> +7 (846) 267-41-23</p>
-                            <p><strong>Email:</strong> dean@university.ru</p>
-                        </div>
-                        <div class="contact-card">
-                            <h4>Библиотека</h4>
-                            <p><strong>Адрес:</strong> ул. Академика Павлова, 1, каб. 105</p>
-                            <p><strong>Телефон:</strong> +7 (846) 267-43-45</p>
-                            <p><strong>Email:</strong> library@university.ru</p>
-                        </div>
-                        <div class="contact-card">
-                            <h4>Техническая поддержка</h4>
-                            <p><strong>Адрес:</strong> ул. Академика Павлова, 1, каб. 310</p>
-                            <p><strong>Телефон:</strong> +7 (846) 267-48-90</p>
-                            <p><strong>Email:</strong> support@university.ru</p>
-                        </div>
-                        <div class="contact-card">
-                            <h4>Общежитие</h4>
-                            <p><strong>Адрес:</strong> ул. Студенческая, 25</p>
-                            <p><strong>Телефон:</strong> +7 (846) 267-51-12</p>
-                            <p><strong>Email:</strong> dormitory@university.ru</p>
-                        </div>
-                    </div>
-                </div>
+            <div id="userData" class="user-data-container" style="display: none;">
+                <h3>Данные пользователя:</h3>
+                <pre id="userDataOutput"></pre>
             </div>
         </main>
-        
+
         <footer>
-            <p>Самарский университет © 2024. Все права защищены.</p>
+            <div class="footer-content">
+                <p>Самарский университет © 2025. Все права защищены.</p>
+            </div>
         </footer>
     </div>
 
+    <script src="js/script.js"></script>
+    <script src="js/UserClass.js"></script>
 </body>
 </html>
